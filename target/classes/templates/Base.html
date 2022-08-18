@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet"  th:href="@{/style.css}">
+</head>
+<body th:style="'height:100%;width:100%'">
+    
+<div th:style="'background:skyblue; height:100px;'">
+    <h1 th:style="'text-align:center'"> Navbar</h1>
+</div >
+
+<div th:replace="${content}"> </div>
+
+<div th:style="'background:lightgreen; height:100px; '">
+    <h1 th:style="'text-align:center'"> Footer</h1>
+</div>
+
+</body>
+</html>

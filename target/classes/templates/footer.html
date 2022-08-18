@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer page</title>
+</head>
+<body>
+    <footer id="FragmentTag" th:fragment="footer(title,subtitle)">
+
+        <div>
+            <h1 th:text="${title}"> </h1>
+            <h2 th:text="${subtitle}"></h2>
+            <h2 th:style="'color:green;'"> This is the Footer Page....</h2>
+            <p th:style="'color:skyblue'">Delhi is a crowded city. There are very few rich people who travel by their own vehicles. The majority of the people cannot afford to hire a taxi or a three-wheeler. They have to depend on D.T.C. buses, which are the cheapest mode of conveyance. D.T.C. buses are like blood capillaries of our body spreading all over in Delhi. One day I had to go to railway station to receive my uncle. I had to reach there by 9.30 a.m. knowing the irregularity of D.T.C. bus service; I left my home at 7.30 a.m. and reached the bus stop. There was a long queue. Everybody was waiting for the bus but the buses were passing one after another without stopping.</p>
+
+        </div>
+
+    </footer>
+</body>
+</html>

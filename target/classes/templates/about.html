@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org" th:replace="Base::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section th:style="'background:orange'">
+        <h1 th:text="'Values in the array: '+${Data}"></h1>
+        <ul>
+
+            <li th:each="a,status : ${Data}">
+                <h2 th:style="${status.even} ? 'color:lime; font-weight:italic' : 'color:yellow;font-weight:bold'"
+                    th:text="${status.index+1}+'   '+${a}"></h2>
+            </li>
+
+        </ul>
+
+
+        <h2> Gender is : <span th:style="${Gender}=='M' ? 'color:red' : ' color:green'"
+                th:if="${Gender}=='M'">Male</span> <span th:style="${Gender}=='M' ? 'color:red' : ' color:green'"
+                th:unless="${Gender}=='M'">Female</span></h2>
+        <!-- <h2 ><span th:unless="${Gender}=='M'">Female</span></h2> -->
+        <div th:switch="${#lists.size(Data)}">
+            <h2 th:case="'0'">List contain 0 Element....</h2>
+            <h2 th:case="'1'"> List contain 1 Element....</h2>
+            <h2 th:case="'2'"> List contains 2 Elements...</h2>
+            <h2 th:case="*"> list contain more than 2 Elements.......</h2>
+        </div>
+    </section>
+
+
+    <footer id="Host-Tag" th:include="footer::footer(${title},${subtitle})">
+
+
+    </footer>
+
+</body>
+
+</html>

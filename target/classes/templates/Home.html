@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="Base::layout(~{::section})">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section th:style="'height:390px;background:yellow;'">
+        <h1 th:text="${Name}"></h1>
+        <h2>Today's Date is : <span th:text="${Date}"></span></h2>
+        <h2 th:text="'My name is : '+${Name}"></h2>
+        <h2 th:text="${ #strings.toUpperCase(Name) }"></h2>
+        <h2 th:text="${ #strings.toLowerCase(Name)}"></h2>
+        <div th:with="a=12 , b=17">
+
+            <h1 th:text="${a}"></h1>
+            <h1 th:text="${b}"></h1>
+            <h2 th:text="'Sum of'+${a}+' And '+${b}+' Is : '+ ${a+b}"></h2>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
